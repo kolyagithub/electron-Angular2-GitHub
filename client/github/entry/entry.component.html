@@ -1,0 +1,20 @@
+<div class="bvd-style">
+    <div class="col-md-12">
+        <form class="todo-form" (submit)="submitEntry($event, owner.value, repo.value)">
+            <fieldset>
+                <section>
+                    <label>Enter the GitHub repository owner(organization) and the repository name.</label><br/>
+                    <input type="text" autofocus placeholder="Owner or organization" required #owner>
+                </section>
+                <section>
+                    <label>Repository name</label><br/>
+                    <input type="text" placeholder="Repository name" required #repo>
+                </section>
+            </fieldset>
+            <div class="bvd-btns">
+                <button type="submit" class="btn bvd-btn">Ok</button>
+                <button type="button" class="btn bvd-btn" (click)="closeEntry()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

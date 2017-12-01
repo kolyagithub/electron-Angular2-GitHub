@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row row-style">
+        <div class="col-md-3 col-md-3-style">
+            <label>Available components</label>
+            <fieldset class="fs-border scroll-area">
+                <input type="checkbox" [(ngModel)]="selectedAll" (change)="selectAll();"/>
+                <div class="larger item-hover" *ngFor="let table of customRepoTables ; let i = index">
+                    <input type="checkbox" class="checkbox-style" value="{{table.name}}" [(ngModel)]="table.selected"
+                           (change)="selectOne($event);">
+                    <strong (click)="showContent(table.name)">{{table.name}}</strong>
+                </div>
+            </fieldset>
+        </div>
+        <div class="col-md-9 col-md-9-style">
+            <label>Content</label>
+            <fieldset class="fs-border">
+                <hotTable *ngIf="data.length > 0" [data]="data"
+                          [colHeaders]="colHeaders"
+                          [columns]="columns"
+                          [options]="options"></hotTable>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<div class="btns-style">
+    <button class="btn btn-style" *ngIf="hasSelected" (click)="loadDataBtn()">Load data</button>
+    <button class="btn btn-style" (click)="backBtn()">Back</button>
+    <button class="btn btn-style" (click)="cancelBtn()">Cancel</button>
+</div>

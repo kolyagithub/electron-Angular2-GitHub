@@ -1,5 +1,5 @@
-# Object file
-*.o
-
-# Ada Library Information
-*.ali
+.idea/electron-Angular2-GitHub.iml
+.idea/inspectionProfiles/
+.idea/modules.xml
+.idea/workspace.xml
+client/node_modules/
