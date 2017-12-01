@@ -6,7 +6,7 @@ Simple app Electron-Angular2-TypeScript
 
 ## Run packaged electron EXE file
 - cd /build/ElectronAngular2/ 
-- Run ElectronAngular2.exe --googlesheet
+- Run ElectronAngular2.exe --github
 
 ## Run electron locally
 - npm start
